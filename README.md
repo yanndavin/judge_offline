@@ -3,6 +3,12 @@ Judge Offline for Python3
 
 Simple module to help testing programming contest exercises.
 
+It aims to help me resolve some problems I have with online platforms:
+- you have to be online
+- if the platform disappears you lost your work
+- if you use multiple platforms the problems you solved are not centralized
+- you can't manage personal problems you've taken from book or other sources
+
 Usage
 -----
 
