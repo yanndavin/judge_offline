@@ -40,7 +40,7 @@ A test is described via 3 files:
 
 Simply run the unit test to run all tests described into files.
 
-![Example on PyCharm](images/pycharm_tests.png)
+![Example on PyCharm](docs/images/pycharm_tests.png)
 
 When a test fails the diff between expect result file and output file is shown (up to a fixed limit).
 
