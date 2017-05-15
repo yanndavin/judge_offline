@@ -10,8 +10,8 @@ from functools import partial
 # Show full diff in unittest
 unittest.util._MAX_LENGTH=2000
 
-def run(module,included):
-    create_test_class(module, included)
+def test(module,included):
+    return create_test_class(module,included)
 
 def create_test_class(module,included=None):
     exec('from ' + module + ' import *')
