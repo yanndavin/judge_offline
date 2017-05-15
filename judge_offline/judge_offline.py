@@ -10,7 +10,10 @@ from functools import partial
 # Show full diff in unittest
 unittest.util._MAX_LENGTH=2000
 
-def create_test_class(module):
+def run(module,included):
+    create_test_class(module, included)
+
+def create_test_class(module,included=None):
     exec('from ' + module + ' import *')
     problems = []
     splits = module.split(".")
@@ -22,7 +25,9 @@ def create_test_class(module):
         for file in files:
             m = re.search('([[aA-zZ|_|\d]+)_in.txt',file)
             if m:
-                problems.append(m.group(1))
+                g1 = m.group(1)
+                if not included or g1 in included:
+                    problems.append(g1)
 
     for problem in problems:
         test_name = 'test_' + problem
