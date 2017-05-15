@@ -62,7 +62,11 @@ def exec_problem_solution(module,problem):
     sys.stdin = f_in
     sys.stdout = f_out
     try:
-        exec(open(module.split(".")[-1] + '.py').read())
+        filename = module.split(".")[-1] + '.py'
+        code_block = compile(open(filename).read(),filename,'exec')
+        blob = {}
+        exec(code_block,blob)
+        print("blob %s" % blob['toto'])
     finally:
         f_in.close()
         f_res.close()

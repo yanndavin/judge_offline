@@ -1,3 +1,3 @@
 #!/bin/python3
-w = input()
+w = input().strip()
 print("hello " + w + "!")
