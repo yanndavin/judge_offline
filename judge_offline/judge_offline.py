@@ -66,7 +66,6 @@ def exec_problem_solution(module,problem):
         code_block = compile(open(filename).read(),filename,'exec')
         blob = {}
         exec(code_block,blob)
-        print("blob %s" % blob['toto'])
     finally:
         f_in.close()
         f_res.close()
